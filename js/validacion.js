@@ -17,20 +17,20 @@ document.getElementById('regBtn').addEventListener('click', () => {
 
     for (let i = 0; i < formulario.length; i++) {
         if (formulario[i].value === '') {
-            alert("Complete todos los campos");
+            showAlertError()
             errores = true;
             break; 
         }
     }
     if (contraseña1.value.length < 6 || contraseña1.value !== contraseña2.value) {
-        alert('Contraseñas no coinciden o no tienen suficientes caracteres');
+        showAlertError()
         errores = true;
     }
     if (!terminos.checked) {
-        alert('Acepte los términos y condiciones');
+        showAlertError()
         errores = true; 
     }
     if (!errores) {
-        alert('Formulario enviado exitosamente');
+        showAlertSuccess()
     }
 });
