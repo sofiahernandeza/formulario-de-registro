@@ -32,5 +32,6 @@ document.getElementById('regBtn').addEventListener('click', () => {
     }
     if (!errores) {
         showAlertSuccess()
+        console.log('cambio random')
     }
 });
